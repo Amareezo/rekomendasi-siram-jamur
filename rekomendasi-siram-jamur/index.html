@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rekomendasi Penyiraman Kumbung Jamur Tiram</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Rekomendasi Penyiraman Kumbung Jamur Tiram</h1>
+<p class="sub">Sistem pakar berbasis aturan dengan forward chaining. Masukkan suhu dan kelembapan rata-rata harian kumbung, sistem menyimpulkan perlu disiram atau tidak, jam, dan banyak atau sedikit.</p>
+<div class="grid">
+  <section class="card" aria-label="Input">
+    <label for="suhu">Suhu rata-rata harian (°C)</label>
+    <input id="suhu" inputmode="decimal" placeholder="contoh: 29" autocomplete="off">
+    <label for="rh">Kelembapan rata-rata harian (%)</label>
+    <input id="rh" inputmode="decimal" placeholder="contoh: 85" autocomplete="off">
+    <button class="go" id="go" type="button">Analisis</button>
+    <p id="err" role="alert"></p>
+    <h2 style="margin-top:14px">Skenario uji</h2>
+    <div class="chips" id="chips"></div>
+  </section>
+  <section aria-live="polite" id="out"></section>
+</div>
+<p class="note">Asumsi tim, belum divalidasi pakar: tingkat siram (sedikit/banyak), jam penyiraman, dan pita suhu "hangat". Ambang suhu dan kelembapan bersumber dari Juknis Budidaya Jamur Tiram dan Padil dkk. (2024), dengan Rusjayanti dan Waluyo sebagai sitasi sekunder. Kumbung diasumsikan tertutup, jadi satu-satunya tindakan adalah penyiraman. Semua ambang ada di objek <code>CFG</code> pada kode.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
